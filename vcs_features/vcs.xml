@@ -134,6 +134,46 @@
             </Watcher>
           </Watches>
         </WatchZone>
+	<WatchZone>
+          <Name>gameload1</Name>
+          <ErrorMetric>PeakAbsolute</ErrorMetric>
+          <Geometry>
+            <X>103</X>
+            <Y>831</Y>
+            <Width>20</Width>
+            <Height>10</Height>
+          </Geometry>
+          <Watches>
+            <Watcher>
+              <Name>gameload1</Name>
+              <WatchImages>
+                <WatchImage>
+                  <FilePath>gameload\bar.png</FilePath>
+                </WatchImage>
+              </WatchImages>
+            </Watcher>
+          </Watches>
+        </WatchZone>
+	<WatchZone>
+          <Name>gameload2</Name>
+          <ErrorMetric>PeakAbsolute</ErrorMetric>
+          <Geometry>
+            <X>423</X>
+            <Y>570</Y>
+            <Width>10</Width>
+            <Height>10</Height>
+          </Geometry>
+          <Watches>
+            <Watcher>
+              <Name>gameload2</Name>
+              <WatchImages>
+                <WatchImage>
+                  <FilePath>gameload\text.png</FilePath>
+                </WatchImage>
+              </WatchImages>
+            </Watcher>
+          </Watches>
+        </WatchZone>
       </WatchZones>
     </Screen>
   </Screens>
