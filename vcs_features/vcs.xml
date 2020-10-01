@@ -9,83 +9,20 @@
         <Height>900</Height>
       </Geometry>
       <WatchZones>
-	      <!--
-	<WatchZone>
-          <Name>passed3</Name>
-	  <ErrorMetric>PeakAbsolute</ErrorMetric>
-          <Geometry>
-            <X>828</X>
-            <Y>382</Y>
-            <Width>7</Width>
-            <Height>7</Height>
-          </Geometry>
-          <Watches>
-            <Watcher>
-              <Name>passed3</Name>
-              <WatchImages>
-                <WatchImage>
-                  <FilePath>passed\pixel.png</FilePath>
-                </WatchImage>
-              </WatchImages>
-            </Watcher>
-          </Watches>
-        </WatchZone>
-	<WatchZone>
-          <Name>passed4</Name>
-          <ErrorMetric>PeakAbsolute</ErrorMetric>
-          <Geometry>
-            <X>406</X>
-            <Y>376</Y>
-            <Width>18</Width>
-            <Height>18</Height>
-          </Geometry>
-          <Watches>
-            <Watcher>
-              <Name>passed4</Name>
-              <WatchImages>
-                <WatchImage>
-                  <FilePath>passed\square.png</FilePath>
-                </WatchImage>
-              </WatchImages>
-            </Watcher>
-          </Watches>
-        </WatchZone>
-	<WatchZone>
-          <Name>passed6</Name>
-          <ErrorMetric>PeakAbsolute</ErrorMetric>
-          <Geometry>
-            <X>1183</X>
-            <Y>366</Y>
-            <Width>30</Width>
-            <Height>20</Height>
-          </Geometry>
-          <Watches>
-            <Watcher>
-              <Name>passed6</Name>
-              <WatchImages>
-                <WatchImage>
-                  <FilePath>passed\stuff.png</FilePath>
-                </WatchImage>
-              </WatchImages>
-            </Watcher>
-          </Watches>
-		      </WatchZone>
-			    -->
 	<WatchZone>
           <Name>p1</Name>
-          <ErrorMetric>PeakAbsolute</ErrorMetric>
           <Geometry>
-            <X>573</X>
-            <Y>412</Y>
-            <Width>10</Width>
-            <Height>10</Height>
+            <X>890</X>
+            <Y>370</Y>
+            <Width>30</Width>
+            <Height>60</Height>
           </Geometry>
           <Watches>
             <Watcher>
               <Name>p1</Name>
               <WatchImages>
                 <WatchImage>
-                  <FilePath>passed\p1.png</FilePath>
+                  <FilePath>mission_passed\mp1.png</FilePath>
                 </WatchImage>
               </WatchImages>
             </Watcher>
@@ -94,43 +31,43 @@
 	<WatchZone>
           <Name>p2</Name>
           <Geometry>
-            <X>907</X>
-            <Y>422</Y>
-            <Width>10</Width>
-            <Height>10</Height>
+            <X>900</X>
+            <Y>370</Y>
+            <Width>30</Width>
+            <Height>60</Height>
           </Geometry>
           <Watches>
             <Watcher>
               <Name>p2</Name>
               <WatchImages>
                 <WatchImage>
-                  <FilePath>passed\p2.png</FilePath>
+                  <FilePath>mission_passed\mp2.png</FilePath>
                 </WatchImage>
               </WatchImages>
             </Watcher>
           </Watches>
-        </WatchZone>
+  	</WatchZone>
 	<WatchZone>
           <Name>p3</Name>
           <Geometry>
-            <X>1093</X>
-            <Y>381</Y>
-            <Width>10</Width>
-            <Height>10</Height>
+            <X>870</X>
+            <Y>370</Y>
+            <Width>30</Width>
+            <Height>60</Height>
           </Geometry>
           <Watches>
             <Watcher>
               <Name>p3</Name>
               <WatchImages>
                 <WatchImage>
-                  <FilePath>passed\p3.png</FilePath>
+                  <FilePath>mission_passed\ap.png</FilePath>
                 </WatchImage>
               </WatchImages>
             </Watcher>
           </Watches>
         </WatchZone>
 	<WatchZone>
-          <Name>gameload1</Name>
+          <Name>snq1</Name>
           <ErrorMetric>PeakAbsolute</ErrorMetric>
           <Geometry>
             <X>103</X>
@@ -140,17 +77,17 @@
           </Geometry>
           <Watches>
             <Watcher>
-              <Name>gameload1</Name>
+              <Name>snq1</Name>
               <WatchImages>
                 <WatchImage>
-                  <FilePath>gameload\bar.png</FilePath>
+                  <FilePath>savenquit\bar.png</FilePath>
                 </WatchImage>
               </WatchImages>
             </Watcher>
           </Watches>
         </WatchZone>
 	<WatchZone>
-          <Name>gameload2</Name>
+          <Name>snq2</Name>
           <ErrorMetric>PeakAbsolute</ErrorMetric>
           <Geometry>
             <X>423</X>
@@ -160,10 +97,10 @@
           </Geometry>
           <Watches>
             <Watcher>
-              <Name>gameload2</Name>
+              <Name>snq2</Name>
               <WatchImages>
                 <WatchImage>
-                  <FilePath>gameload\text.png</FilePath>
+                  <FilePath>savenquit\text.png</FilePath>
                 </WatchImage>
               </WatchImages>
             </Watcher>
