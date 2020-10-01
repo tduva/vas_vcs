@@ -10,51 +10,9 @@
       </Geometry>
       <WatchZones>
 	      <!--
-        <WatchZone>
-          <Name>passed</Name>
-          <ErrorMetric>PeakAbsolute</ErrorMetric>
-          <Geometry>
-            <X>330</X>
-            <Y>344</Y>
-            <Width>137</Width>
-            <Height>84</Height>
-          </Geometry>
-          <Watches>
-            <Watcher>
-              <Name>passed</Name>
-              <WatchImages>
-                <WatchImage>
-                  <FilePath>passed\mi.png</FilePath>
-                </WatchImage>
-              </WatchImages>
-            </Watcher>
-          </Watches>
-		      </WatchZone>
-	      -->
-	<!--
-	<WatchZone>
-          <Name>passed2</Name>
-          <Geometry>
-            <X>334</X>
-            <Y>347</Y>
-            <Width>428</Width>
-            <Height>79</Height>
-          </Geometry>
-          <Watches>
-            <Watcher>
-              <Name>passed2</Name>
-              <WatchImages>
-                <WatchImage>
-                  <FilePath>passed\mission.png</FilePath>
-                </WatchImage>
-              </WatchImages>
-            </Watcher>
-          </Watches>
-		</WatchZone>
-	-->
 	<WatchZone>
           <Name>passed3</Name>
-		  <ErrorMetric>PeakAbsolute</ErrorMetric>
+	  <ErrorMetric>PeakAbsolute</ErrorMetric>
           <Geometry>
             <X>828</X>
             <Y>382</Y>
@@ -92,28 +50,6 @@
             </Watcher>
           </Watches>
         </WatchZone>
-	<!--
-	<WatchZone>
-          <Name>passed5</Name>
-          <ErrorMetric>PeakAbsolute</ErrorMetric>
-          <Geometry>
-            <X>348</X>
-            <Y>427</Y>
-            <Width>13</Width>
-            <Height>5</Height>
-          </Geometry>
-          <Watches>
-            <Watcher>
-              <Name>passed5</Name>
-              <WatchImages>
-                <WatchImage>
-                  <FilePath>passed\black.png</FilePath>
-                </WatchImage>
-              </WatchImages>
-            </Watcher>
-          </Watches>
-		</WatchZone>
-	-->
 	<WatchZone>
           <Name>passed6</Name>
           <ErrorMetric>PeakAbsolute</ErrorMetric>
@@ -129,6 +65,65 @@
               <WatchImages>
                 <WatchImage>
                   <FilePath>passed\stuff.png</FilePath>
+                </WatchImage>
+              </WatchImages>
+            </Watcher>
+          </Watches>
+		      </WatchZone>
+			    -->
+	<WatchZone>
+          <Name>p1</Name>
+          <ErrorMetric>PeakAbsolute</ErrorMetric>
+          <Geometry>
+            <X>573</X>
+            <Y>412</Y>
+            <Width>10</Width>
+            <Height>10</Height>
+          </Geometry>
+          <Watches>
+            <Watcher>
+              <Name>p1</Name>
+              <WatchImages>
+                <WatchImage>
+                  <FilePath>passed\p1.png</FilePath>
+                </WatchImage>
+              </WatchImages>
+            </Watcher>
+          </Watches>
+        </WatchZone>
+	<WatchZone>
+          <Name>p2</Name>
+          <Geometry>
+            <X>907</X>
+            <Y>422</Y>
+            <Width>10</Width>
+            <Height>10</Height>
+          </Geometry>
+          <Watches>
+            <Watcher>
+              <Name>p2</Name>
+              <WatchImages>
+                <WatchImage>
+                  <FilePath>passed\p2.png</FilePath>
+                </WatchImage>
+              </WatchImages>
+            </Watcher>
+          </Watches>
+        </WatchZone>
+	<WatchZone>
+          <Name>p3</Name>
+          <Geometry>
+            <X>1093</X>
+            <Y>381</Y>
+            <Width>10</Width>
+            <Height>10</Height>
+          </Geometry>
+          <Watches>
+            <Watcher>
+              <Name>p3</Name>
+              <WatchImages>
+                <WatchImage>
+                  <FilePath>passed\p3.png</FilePath>
                 </WatchImage>
               </WatchImages>
             </Watcher>

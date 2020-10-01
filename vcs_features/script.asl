@@ -19,8 +19,9 @@ init
 
 update
 {
-	vars.missionPassed = features["pixel"].min(30) > 96 && features["square"].min(30) > 92 && features["stuff"].min(30) > 92;
-	vars.loadingGame = features["bar"].min(30) > 94 && features["text"].min(30) > 94 && features["text"].old(50) < 94;
+	vars.missionPassed = features["p1"].min(80) > 96 && features["p2"].min(80) > 92 && features["p3"].min(80) > 96;
+	vars.loadingGame = features["bar"].min(30) > 94 && features["text"].min(30) > 94 && features["text"].old(100) < 94;
+	vars.test = features["p1"].min(80);
 
 	if (timer.CurrentPhase != vars.PrevPhase)
 	{
