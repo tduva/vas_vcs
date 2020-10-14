@@ -68,39 +68,18 @@
         </WatchZone>
 	<WatchZone>
           <Name>snq1</Name>
-          <ErrorMetric>PeakAbsolute</ErrorMetric>
           <Geometry>
-            <X>103</X>
-            <Y>831</Y>
-            <Width>20</Width>
-            <Height>10</Height>
+            <X>240</X>
+            <Y>450</Y>
+            <Width>30</Width>
+            <Height>60</Height>
           </Geometry>
           <Watches>
             <Watcher>
               <Name>snq1</Name>
               <WatchImages>
                 <WatchImage>
-                  <FilePath>savenquit\bar.png</FilePath>
-                </WatchImage>
-              </WatchImages>
-            </Watcher>
-          </Watches>
-        </WatchZone>
-	<WatchZone>
-          <Name>snq2</Name>
-          <ErrorMetric>PeakAbsolute</ErrorMetric>
-          <Geometry>
-            <X>423</X>
-            <Y>570</Y>
-            <Width>10</Width>
-            <Height>10</Height>
-          </Geometry>
-          <Watches>
-            <Watcher>
-              <Name>snq2</Name>
-              <WatchImages>
-                <WatchImage>
-                  <FilePath>savenquit\text.png</FilePath>
+                  <FilePath>savenquit\vcs.png</FilePath>
                 </WatchImage>
               </WatchImages>
             </Watcher>
