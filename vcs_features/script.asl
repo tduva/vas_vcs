@@ -12,6 +12,21 @@ startup
 	};
 	vars.DebugOutput = DebugOutput;
 
+	settings.Add("multi", true, "Combined Splitting");
+	settings.SetToolTip("multi", "Several splits combined into one by specifying in the split name how many\ntheoretical splits (Mission Passes etc.) it takes to actually split");
+	settings.CurrentDefaultParent = "multi";
+	settings.Add("multiTotal", true, "Set total: [<number>]");
+	settings.SetToolTip("multiTotal", "Add '[<number>]' anywhere, will cause other formats to be ignored for that split");
+	settings.Add("multiMultiplication", true, "Multiplication: x<number>");
+	settings.SetToolTip("multiMultiplication", "Add 'x<number>' anywhere (e.g. 'OBWAT? x3' = 3 or 'Mission Name (x4)' = 4)");
+	settings.Add("multiPlus", true, "Addition: <part> + <part>");
+	settings.SetToolTip("multiPlus", "Add anywhere between parts to add together (e.g. 'HTH x4 + Dupe' = 4+1 = 5 or 'Mission1 + Mission2' = 1+1 = 2)");
+	settings.Add("multiNumber", true, "Number in front: <number> <split name>");
+	settings.SetToolTip("multiNumber", "Add a number at the very beginning of a split name, possibly after Subsplits formatting (e.g. '2 Asset Takeovers' = 2)");
+}
+
+init
+{
 	Func<string, string, int> parseTargetNum = (text, regex) => {
 		var m = System.Text.RegularExpressions.Regex.Match(text, regex);
 		if (m.Success)
@@ -22,28 +37,40 @@ startup
 	};
 
 	Func<string, int> GetTargetNum = (text) => {
-		// TODO: Add settings
-		if (true) {
-			var num = parseTargetNum(text, @"\bx(\d)\b");
+		// Remove Subsplits Formatting
+		text = System.Text.RegularExpressions.Regex.Replace(text, @"^(-|\{.*\})", "");
+		if (settings["multiTotal"]) {
+			var num = parseTargetNum(text, @"\[(\d+)\]");
 			if (num > 0)
 			{
 				return num;
 			}
 		}
-		if (true) {
-			var num = parseTargetNum(text, @"\[(\d)\]");
+		var result = 0;
+		var parts = settings["multiPlus"] ? text.Split('+') : new string[]{text};
+		foreach (var part in parts)
+		{
+			var num = 0;
+			if (settings["multiMultiplication"])
+			{
+				num += parseTargetNum(part, @"\bx(\d+)\b");
+			}
+			if (settings["multiNumber"])
+			{
+				num += parseTargetNum(part, @"^\s*(\d+)\b");
+			}
 			if (num > 0)
 			{
-				return num;
+				result += num;
+			}
+			else
+			{
+				result++;
 			}
 		}
-		return 0;
+		return result;
 	};
 	vars.GetTargetNum = GetTargetNum;
-}
-
-init
-{
 }
 
 update
@@ -79,7 +106,7 @@ split
 		var splitIndex = timer.CurrentSplitIndex;
 		var info = "[Start: "+vars.loadingGame+" Pass: "+vars.missionPassed+"]";
 		var targetNum = vars.GetTargetNum(splitName);
-		if (targetNum > 0)
+		if (targetNum > 1)
 		{
 			if (!vars.passedCount.ContainsKey(splitIndex))
 			{
