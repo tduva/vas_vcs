@@ -76,7 +76,7 @@ init
 update
 {
 	vars.missionPassed = features["ap"].min(30) > 94 || features["mp1"].min(30) > 94 || features["mp2"].min(30) > 94;
-	vars.loadingGame = features["vcs"].min(30) > 94;
+	vars.loadingGame = features["vcs"].min(30) > 93;
 
 	if (timer.CurrentPhase != vars.PrevPhase)
 	{
