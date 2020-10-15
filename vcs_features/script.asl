@@ -101,6 +101,11 @@ split
 {
 	if ((vars.loadingGame || vars.missionPassed) && Environment.TickCount - vars.lastSplit > 10*1000)
 	{
+		if (!timer.CurrentTime.RealTime.HasValue || timer.CurrentTime.RealTime.Value.TotalSeconds < 10)
+		{
+			// May split right after starting the timer otherwise, since the title screen may be there
+			return false;
+		}
 		vars.lastSplit = Environment.TickCount;
 		var splitName = timer.CurrentSplit.Name;
 		var splitIndex = timer.CurrentSplitIndex;
